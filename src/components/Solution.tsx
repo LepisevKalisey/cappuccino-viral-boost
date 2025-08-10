@@ -14,10 +14,10 @@ export function Solution({ onCtaClick }: SolutionProps) {
         
         <div className="bg-card/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-warm">
           <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
-            Мы автоматизировали механику: клиент получает скидку или шанс на приз, 
+            Мы автоматизировали механику: клиент получает скидку и шанс на огромный приз, 
             вы — гарантированный вирусный ролик. 
             <span className="block mt-4 font-semibold text-primary">
-              Без POS, за 10 минут, с полной управляемостью.
+              За 10 минут, с полной управляемостью.
             </span>
           </p>
 
@@ -26,7 +26,7 @@ export function Solution({ onCtaClick }: SolutionProps) {
               <div className="text-3xl mb-3">⚡</div>
               <h3 className="font-bold text-primary mb-2">Быстрый запуск</h3>
               <p className="text-sm text-muted-foreground">
-                Подключение за 10 минут без интеграций с POS
+                Подключение за 10 минут без лишних интеграций с CRM и кассой
               </p>
             </div>
             <div className="bg-accent/20 rounded-xl p-6">
