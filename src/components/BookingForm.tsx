@@ -6,6 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 
 export function BookingForm() {
+  const supportPhone = '77785612123';
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     businessName: '',
@@ -29,8 +30,15 @@ export function BookingForm() {
       return;
     }
 
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
+    const message = `Название заведения: ${formData.businessName}\n` +
+      `Город: ${formData.city}\n` +
+      `Имя: ${formData.name}\n` +
+      `Телефон: ${formData.phone}\n` +
+      `Email: ${formData.email}\n` +
+      `Количество точек: ${formData.locations}`;
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${supportPhone}?text=${encodedMessage}`;
+    window.open(url, '_blank');
     
     toast({
       title: "Заявка отправлена!",
