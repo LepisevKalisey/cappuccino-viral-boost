@@ -14,7 +14,7 @@ export function Offer({ onCtaClick }: OfferProps) {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2024-10-01T00:00:00+06:00'); // Almaty timezone
+    const targetDate = new Date('2025-10-01T00:00:00+06:00'); // Almaty timezone
     
     const timer = setInterval(() => {
       const now = new Date().getTime();
