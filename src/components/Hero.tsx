@@ -48,7 +48,7 @@ export function Hero({ onCtaClick }: HeroProps) {
             Подключить бесплатно
           </Button>
           <p className="text-sm text-primary-foreground/80">
-            Старт 1 октября.
+            Старт 1 октября 2025.
           </p>
         </div>
 
