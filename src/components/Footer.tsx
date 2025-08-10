@@ -30,7 +30,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
             >
-              <span className="text-xl">📱</span>
+              <span className="text-xl"></span>
               Telegram: @Cappuccino_Challenge_bot
             </a>
           </div>
