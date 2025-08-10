@@ -25,14 +25,14 @@ export function Hero({ onCtaClick }: HeroProps) {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 px-2">
           <span className="block">100 000 просмотров</span>
           <span className="block text-accent">вашей рекламы</span>
           <span className="block">за чашку капучино</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
           Каждый ваш гость — это канал продвижения. Он пьёт кофе, снимает Reels/TikTok, 
           а вы получаете охват и новых клиентов.
         </p>
@@ -43,7 +43,7 @@ export function Hero({ onCtaClick }: HeroProps) {
             variant="hero" 
             size="xl"
             onClick={onCtaClick}
-            className="w-full md:w-auto min-w-80 transform hover:scale-105 transition-all duration-300"
+            className="w-full max-w-sm sm:max-w-md md:w-auto md:min-w-80 transform hover:scale-105 transition-all duration-300 mx-auto"
           >
             Забронировать место среди первых 100
           </Button>
