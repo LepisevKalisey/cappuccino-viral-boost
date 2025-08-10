@@ -12,6 +12,7 @@ export function Offer({ onCtaClick }: OfferProps) {
     minutes: 0,
     seconds: 0
   });
+  const [isExpired, setIsExpired] = useState(false);
 
   useEffect(() => {
     const targetDate = new Date('2025-10-01T00:00:00+06:00'); // Almaty timezone
@@ -20,14 +21,17 @@ export function Offer({ onCtaClick }: OfferProps) {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
       
-      if (distance > 0) {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
-        });
+      if (distance < 0) {
+        clearInterval(timer);
+        setIsExpired(true);
+        return;
       }
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000)
+      });
     }, 1000);
 
     return () => clearInterval(timer);
@@ -54,23 +58,27 @@ export function Offer({ onCtaClick }: OfferProps) {
           </p>
 
           {/* Countdown Timer */}
-          <div className="grid grid-cols-4 gap-4 mb-8 max-w-md mx-auto">
-            {[
-              { label: 'Дни', value: timeLeft.days },
-              { label: 'Часы', value: timeLeft.hours },
-              { label: 'Мин', value: timeLeft.minutes },
-              { label: 'Сек', value: timeLeft.seconds }
-            ].map((item, index) => (
-              <div key={index} className="bg-accent/10 rounded-xl p-4">
-                <div className="text-2xl font-bold text-primary">
-                  {item.value.toString().padStart(2, '0')}
+          {isExpired ? (
+            <div className="text-xl font-bold text-destructive mb-8">Предложение завершилось!</div>
+          ) : (
+            <div className="grid grid-cols-4 gap-4 mb-8 max-w-md mx-auto">
+              {[
+                { label: 'Дни', value: timeLeft.days },
+                { label: 'Часы', value: timeLeft.hours },
+                { label: 'Мин', value: timeLeft.minutes },
+                { label: 'Сек', value: timeLeft.seconds }
+              ].map((item) => (
+                <div key={item.label} className="bg-accent/10 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-primary">
+                    {item.value.toString().padStart(2, '0')}
+                  </div>
+                  <div className="text-xs text-muted-foreground uppercase">
+                    {item.label}
+                  </div>
                 </div>
-                <div className="text-xs text-muted-foreground uppercase">
-                  {item.label}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           <Button 
             variant="hero" 

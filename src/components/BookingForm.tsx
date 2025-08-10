@@ -57,8 +57,9 @@ export function BookingForm() {
     });
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -82,8 +83,9 @@ export function BookingForm() {
                 <Input
                   id="businessName"
                   type="text"
+                  name="businessName"
                   value={formData.businessName}
-                  onChange={(e) => handleInputChange('businessName', e.target.value)}
+                  onChange={handleInputChange}
                   placeholder="Café Central"
                   required
                   className="h-12"
@@ -97,8 +99,9 @@ export function BookingForm() {
                 <Input
                   id="city"
                   type="text"
+                  name="city"
                   value={formData.city}
-                  onChange={(e) => handleInputChange('city', e.target.value)}
+                  onChange={handleInputChange}
                   placeholder="Алматы"
                   required
                   className="h-12"
@@ -114,8 +117,9 @@ export function BookingForm() {
                 <Input
                   id="name"
                   type="text"
+                  name="name"
                   value={formData.name}
-                  onChange={(e) => handleInputChange('name', e.target.value)}
+                  onChange={handleInputChange}
                   placeholder="Александр"
                   required
                   className="h-12"
@@ -129,8 +133,9 @@ export function BookingForm() {
                 <Input
                   id="phone"
                   type="tel"
+                  name="phone"
                   value={formData.phone}
-                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  onChange={handleInputChange}
                   placeholder="+7 (777) 123-45-67"
                   required
                   className="h-12"
@@ -146,8 +151,9 @@ export function BookingForm() {
                 <Input
                   id="email"
                   type="email"
+                  name="email"
                   value={formData.email}
-                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  onChange={handleInputChange}
                   placeholder="cafe@example.com"
                   className="h-12"
                 />
@@ -160,8 +166,9 @@ export function BookingForm() {
                 <Input
                   id="locations"
                   type="number"
+                  name="locations"
                   value={formData.locations}
-                  onChange={(e) => handleInputChange('locations', e.target.value)}
+                  onChange={handleInputChange}
                   placeholder="1"
                   min="1"
                   className="h-12"
