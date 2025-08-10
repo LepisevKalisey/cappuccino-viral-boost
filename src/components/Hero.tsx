@@ -45,10 +45,10 @@ export function Hero({ onCtaClick }: HeroProps) {
             onClick={onCtaClick}
             className="w-full max-w-sm sm:max-w-md md:w-auto md:min-w-80 transform hover:scale-105 transition-all duration-300 mx-auto"
           >
-            Забронировать место среди первых 100
+            Подключить бесплатно
           </Button>
           <p className="text-sm text-primary-foreground/80">
-            Старт 1 октября. Бесплатно для первых участников.
+            Старт 1 октября.
           </p>
         </div>
 
