@@ -63,10 +63,23 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'gradient-coffee': 'var(--gradient-coffee)',
+				'gradient-cappuccino': 'var(--gradient-cappuccino)',
+				'gradient-hero': 'var(--gradient-hero)'
+			},
+			boxShadow: {
+				'coffee': 'var(--shadow-coffee)',
+				'warm': 'var(--shadow-warm)'
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				display: ['Poppins', 'system-ui', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {
