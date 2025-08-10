@@ -78,7 +78,7 @@ export function Offer({ onCtaClick }: OfferProps) {
             onClick={onCtaClick}
             className="w-full max-w-sm sm:max-w-md md:w-auto md:min-w-80 transform hover:scale-105 transition-all duration-300 animate-pulse mx-auto"
           >
-            Забронировать место среди первых 100
+            Подключиться бесплатно
           </Button>
           
           <p className="text-sm text-muted-foreground mt-4">
