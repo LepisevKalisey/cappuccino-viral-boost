@@ -62,7 +62,7 @@ export function BookingForm() {
           </h2>
           
           <p className="text-center text-muted-foreground mb-8">
-            Заполните форму и получите бесплатное подключение до 1 января 2025
+            Заполните форму и получите бесплатное подключение до 1 января 2026
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -182,7 +182,7 @@ export function BookingForm() {
               size="xl"
               className="w-full transform hover:scale-105 transition-all duration-300"
             >
-              Забронировать место в бесплатной сотне
+              Забронировать место
             </Button>
 
             <p className="text-center text-sm text-muted-foreground">
