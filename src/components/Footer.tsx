@@ -38,7 +38,7 @@ export function Footer() {
           {/* Bottom */}
           <div className="border-t border-primary-foreground/20 pt-6">
             <p className="text-primary-foreground/60 text-sm">
-              © 2024 Cappuccino Challenge. Запуск 1 октября 2024 (Asia/Almaty)
+              © 2025 Cappuccino Challenge. Запуск 1 октября 2025
             </p>
           </div>
         </div>
