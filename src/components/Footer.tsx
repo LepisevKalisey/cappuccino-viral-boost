@@ -1,3 +1,5 @@
+import { Send } from 'lucide-react'; // Пример иконки, можно заменить на иконку Telegram
+
 export function Footer() {
   return (
     <footer className="py-12 bg-primary">
@@ -30,8 +32,8 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
             >
-              <span className="text-xl"></span>
-              Telegram: @Cappuccino_Challenge_bot
+              <Send size={20} />
+              Telegram: Cappuccino Owners Team
             </a>
           </div>
 
